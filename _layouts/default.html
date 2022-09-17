@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/11d3f06d34.js" crossorigin="anonymous"></script>
+
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <!-- Title -->
+        <h2><a href="{{ site.me.website_url }}">{{ site.title }}</a></h2>
+        <p>{{ site.description | default: site.github.project_tagline}}</p>
+        <br>
+        <!-- Headshot Photo -->
+        {% if site.headshot %}
+        <div class="cat">
+          <img src="{{site.headshot | relative_url}}" alt="headshot" />
+        </div>
+        {% endif %}
+        <!-- Links -->
+        <br>
+        <div id="webaddress">
+          <a href="{{ site.github.owner_url }}"><i class="fa-brands fa-github"></i> GitHub</a>
+          <br>
+          <a href="{{ site.me.googlescholar_url }}"><i class="fa-solid fa-user-graduate"></i> Google Scholar</a>
+          <br>
+          <a href="{{ site.me.linkedin_url }}"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <br>
+          <a href="{{ site.me.cv_pdf_url }}"><i class="fa-solid fa-file-pdf"></i> PDF CV</a>
+          <br>
+          <a href="{{ site.me.cv_url }}"><i class="fa-solid fa-globe"></i> Online CV</a>
+        </div>
+        <br><br>
+        <div id="links">
+          <h4>Things I've Made</h4>
+          <a href="{{ site.links.apt_regional }}">Regional Anesthesia</a>
+          <br><br>
+        </div>
+      </header>
+      <section>
+        <!-- README.md page -->
+        {{ content }}
+
+      </section>
+      <footer>
+        <p><small>&mdash; Last updated: Sept 16, 2022</small></p>
+      </footer>
+    </div>
+    <script src="{{ " /assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+
+</html>
