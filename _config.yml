@@ -6,7 +6,7 @@ plugins:
 markdown: kramdown
 
 title: Philip Chung, MD, MS
-description: Anesthesiologist & Machine Learning Researcher
+description: Anesthesiologist & Healthcare AI Researcher
 headshot: /assets/img/PhilipHeadshot2022.jpg
 
 me:
